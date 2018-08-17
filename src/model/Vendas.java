@@ -16,6 +16,8 @@ public class Vendas {
     }
     
     public boolean novaVenda(int fila, int assento, int tipoIngresso) {
+                    System.out.println(tipoIngresso);
+        
         boolean deuCerto = false;
         Ingresso ingresso;
         Cadeira cadeira;

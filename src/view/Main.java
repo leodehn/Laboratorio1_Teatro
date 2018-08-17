@@ -28,11 +28,11 @@ public class Main {
                 vendeu = vendas.novaVenda(fileira, assento, Vendas.INTEIRA);
             }else {
                 meia = JOptionPane.showConfirmDialog(null, "Meia Entrada?","Ingressos do Teatro POO", JOptionPane.YES_NO_OPTION);
-            if(inteira == JOptionPane.YES_OPTION) {
-                vendeu = vendas.novaVenda(fileira, assento, Vendas.MEIA);
-            }else {
+                if(meia == JOptionPane.YES_OPTION) {
+                    vendeu = vendas.novaVenda(fileira, assento, Vendas.MEIA);
+                }else {
                 vendeu = vendas.novaVenda(fileira, assento, Vendas.ISENTO);
-            }
+                }
             }
             if(!vendeu) {
                 JOptionPane.showMessageDialog(null, "Cadeira ocupada ou Inválida", "Ingresso do Teatro POO",
