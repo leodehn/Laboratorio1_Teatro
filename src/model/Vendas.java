@@ -16,12 +16,19 @@ public class Vendas {
     }
     
     public boolean novaVenda(int fila, int assento, int tipoIngresso) {
+    	/*
+    	 * Nunca inserir interação com usuário na lógica de negócio.
+    	 */
                     System.out.println(tipoIngresso);
         
         boolean deuCerto = false;
         Ingresso ingresso;
         Cadeira cadeira;
         
+        /*
+         * Apenas a verificar se a cadeira é nula resolver todo o problema, dispensando
+         * o if complexo e ineficiente abaixo.
+         */
         if(fila<=teatro.getFileiras()&&fila>0&&assento<=teatro.getCadeiras()&&assento>0){
             if(teatro.vender(fila, assento)) {
                 cadeira = teatro.buscaCadeira(fila, assento);
